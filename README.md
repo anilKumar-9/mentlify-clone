@@ -1,7 +1,6 @@
 # Mintlify Landing Page Clone
 
-A modern, responsive landing page inspired by Mintlify, built using **HTML5 and CSS3**.  
-This project focuses on clean UI design, readable CSS, and real-world SaaS layout practices.
+ChaiCode Week-2 Assignment Mintlify website clone
 
 🔗 **Live Demo:** [https://mentlify-clone-76ajxtwfc-anilkumar-9s-projects.vercel.app/]
 
