@@ -29,6 +29,3 @@ Built to practice **professional frontend development**, clean code structure, a
 ## Author
 **Anil Kumar**
 
----
-
-> Educational & portfolio project. Design inspired by Mintlify.
