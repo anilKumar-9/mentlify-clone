@@ -1,0 +1,692 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(8, 9, 11);
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+        'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+        'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 64px;
+    padding: 0 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: transparent;
+    z-index: 1000;
+}
+
+/* Brand */
+.navbar-brand img {
+    height: 32px;
+    width: auto;
+    margin-left: 200px;
+}
+
+/* Links */
+.navbar-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.navbar-links :nth-child(1) {
+    margin-left: 40px;
+}
+
+.navbar-links a:hover {
+    color: rgb(144, 236, 197);
+}
+
+/* Actions */
+.navbar-actions {
+    display: flex;
+    gap: 12px;
+}
+
+button {
+    height: 40px;
+    padding: 0 16px;
+
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+
+    font-weight: 500;
+}
+
+.primary-button {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+}
+
+.secondary-button {
+    background: #fff;
+    color: rgb(8, 9, 11);
+    margin-right: 160px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(to top,
+            rgb(8, 9, 11) 0%,
+            rgba(8, 9, 11, 0.85) 20%,
+            rgba(8, 9, 11, 0.4) 45%,
+            rgba(8, 9, 11, 0) 70%);
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero {
+    min-height: 100vh;
+    width: 100%;
+
+    background-image: url("./images/background-image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    padding-top: 64px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-container {
+    max-width: 600px;
+    padding: 0 24px;
+    margin: 0 auto;
+
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    line-height: 1.1;
+
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+    justify-content: center;
+    z-index: 1;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #fff;
+
+    max-width: 520px;
+    margin-top: 30px;
+
+    z-index: 1;
+}
+
+/* Badge */
+.hero-badge {
+    margin-top: 50px;
+    margin-bottom: 24px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 6px 14px;
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    z-index: 1;
+}
+
+.badge-new {
+    background: #1ecb8b;
+    color: #000;
+
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 8px;
+
+    border-radius: 999px;
+    z-index: 1;
+}
+
+.badge-arrow {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+/* =========================
+   EMAIL CTA
+========================= */
+.hero-cta {
+    margin-top: 32px;
+
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+
+    z-index: 1;
+}
+
+.hero-cta input {
+    height: 48px;
+    width: 260px;
+    padding: 0 16px;
+
+    border-radius: 24px;
+    border: none;
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+
+    font-size: 14px;
+    z-index: 1;
+}
+
+#hero-email::placeholder {
+    color: #fff;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.hero-cta button {
+    height: 48px;
+    padding: 0 24px;
+
+    border-radius: 24px;
+    border: none;
+
+    background: #fff;
+    color: #000;
+
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Hover polish */
+.hero-badge:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Screen reader only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* =========================
+   HERO PREVIEW IMAGE
+========================= */
+.hero-preview {
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero::before {
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* =========================
+   FULL WINDOW PREVIEW
+========================= */
+.hero-preview-section {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-top: 64px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.hero-preview-section img {
+    width: 70%;
+    max-width: 1600px;
+
+    height: auto;
+    object-fit: contain;
+
+    border-radius: 12px;
+}
+
+.client-preview img {
+    width: 100%;
+    max-width: 1600px;
+
+    height: auto;
+    object-fit: contain;
+
+    border-radius: 12px;
+}
+
+/* =========================
+   BUILD FOR INTELLIGENCE
+========================= */
+.build-for-intelligence {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.build-for-intelligence-container h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.build-for-intelligence-container p {
+    text-align: center;
+    font-size: 18px;
+
+    margin-top: 15px;
+    padding: 5px;
+
+    color: #7b7b7b;
+}
+
+.build-for-intelligence-image {
+    display: flex;
+    justify-content: center;
+}
+
+.build-for-intelligence-image img {
+    width: 70%;
+    max-width: 1600px;
+
+    margin-top: 45px;
+    height: auto;
+
+    object-fit: contain;
+    border-radius: 12px;
+    justify-content: center;
+}
+
+.build-for-intelligence-assistance-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.build-for-intelligence-assistance-image img {
+    width: 73%;
+    max-width: 1600px;
+
+    margin-top: 45px;
+    margin-right: 14px;
+    margin-bottom: 80px;
+
+    height: auto;
+    object-fit: contain;
+
+    border-radius: 12px;
+}
+
+/* =========================
+   ENTERPRISE REINVENTION
+========================= */
+.enterprise-reinvention-container {
+    width: 100%;
+    height: auto;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    display: flex;
+    justify-content: center;
+}
+
+.enterprise-reinvention-content {
+    width: 70%;
+    height: auto;
+}
+
+.enterprise-reinvention-content .para1 {
+    margin-top: 100px;
+
+    color: #1ecb8b;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.enterprise-reinvention-content .heading1 {
+    margin-top: 10px;
+    font-size: 40px;
+}
+
+.para2-button {
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.para2-button p {
+    font-size: 18px;
+    color: #7b7b7b;
+}
+
+.build-with-partnership-image {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.build-with-partnership-image img {
+    width: 70%;
+    height: auto;
+}
+
+/* =========================
+   CUSTOMERS
+========================= */
+.customers-container {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+}
+
+.customers-content {
+    width: 70%;
+    height: auto;
+
+    text-align: center;
+}
+
+.customers-content .cust-para {
+    margin-top: 100px;
+
+    color: #1ecb8b;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.customers-content .cust-heading {
+    margin-top: 10px;
+    font-size: 40px;
+}
+
+.customers-content .cust-description {
+    margin-top: 12px;
+
+    font-size: 18px;
+    color: #7b7b7b;
+}
+
+.image-container {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+}
+
+.customer-image img {
+    width: 70%;
+    height: auto;
+
+    margin-left: 250px;
+}
+
+/* =========================
+   ADVANTAGE
+========================= */
+.advantage-container {
+    margin-top: 150px;
+
+    width: 100%;
+    height: auto;
+
+    text-align: center;
+}
+
+.advantage-heading h2 {
+    margin-top: 10px;
+    font-size: 40px;
+}
+
+.advantage-para p {
+    margin-top: 12px;
+    font-size: 18px;
+}
+
+.advantage-buttons {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 40px;
+}
+
+.advantage-image {
+    width: 70%;
+    align-items: center;
+
+    margin-left: 200px;
+}
+
+.advantage-image img {
+    width: 80%;
+    margin-left: 45px;
+}
+
+.advantage-buttons .secondary-button {
+    margin-right: 10px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    border: 1px solid #79797938;
+    margin-top: 60px;
+
+    width: 70%;
+    margin-left: 250px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-top {
+    width: 100%;
+    height: auto;
+
+    border-bottom: 1px solid #79797938;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 30px;
+    margin-top: 50px;
+}
+
+.footer-top .social-media {
+    display: flex;
+    gap: 20px;
+    height: 20px;
+}
+
+.footer-top .social-media a img {
+    height: 100%;
+}
+
+.footer-top .logo .icon {
+    height: 40px;
+    width: auto;
+    margin-left: 80px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    padding: 60px 40px;
+    border-bottom: 1px solid #79797938;
+}
+
+.footer-container nav label {
+    color: #b4b6b6;
+}
+
+footer-container {
+    width: 70%;
+    height: auto;
+}
+
+.footer-container nav ul {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.footer-security-bottom {
+    width: 100%;
+    height: auto;
+
+    border-bottom: 1px solid #79797938;
+
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-security-bottom {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+
+    border: 1px solid #79797938;
+}
+
+.footer-security-bottom img {
+    border-radius: 50px;
+    height: 70px;
+}
+
+.footer-security-bottom p {
+    margin-left: 86px;
+}
+
+.footer-bottom {
+    width: 100%;
+    height: 200px;
+
+    border-bottom: 1px solid #79797938;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-container ul {
+    list-style: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.footer-container ul a {
+    list-style: none;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.social-media {
+    margin-right: 0px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+}
